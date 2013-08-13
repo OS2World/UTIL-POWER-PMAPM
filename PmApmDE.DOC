@@ -1,0 +1,172 @@
+PmApm
+=====
+(c) 1998 C. Bockemuehl (cbockem@datacomm.ch)
+Version 0.1 (Erste ver”ffentlichte Version)
+
+PM-Programm, welches mit Hilfe von APM/2 (Version
+1.4 von Roman Stangl <rstangl@vnet.ibm.com>) das System
+auf definierte Weise herunterf„hrt:
+
+"Pause":       Alle Aktivit„ten werden beendet. Reaktivierung
+               mit Maus, Tastendruck etc.
+"Ruhezustand": Alle Activit„ten werden beendet, aber
+               Reaktivierung erst durch Bet„tigung des
+               Einschaltknopfes. Allerdings muss dann das
+               System nicht erst wieder neu gestartet werden
+               (Reboot), sondern es ist gleich wieder dort
+               wo Sie es verlassen haben.
+"Ausschalten": Das System wird beendet und automatisch
+               ausgeschalten, d.h. der Ausschaltknopf muss
+               nicht noch extra bet„tigt werden. Neustart des
+               Systems beim n„chsten Wiedereinschalten.
+
+Rechte
+------
+Dieses Programm ist zur freien Verfgung, d.h. "freeware" -
+oder besser "e-mail ware". Jeder darf es frei kopieren und
+benutzen. Es wird allerdings keinerlei Gew„hrleistung oder
+Garantie dafr bernommen. Bitte schicken Sie mir eine
+e-mail, wenn Sie das Programm verwenden, mit oder ohne
+Kommentare oder eigene Anregungen.
+
+Installation
+------------
+Um PmApm zu benutzen mssen Sie zuerst APM/2 v1.4 installieren
+(andere Versionen k”nnen auch funktionieren, aber ich habe
+sie nicht ausprobiert). Sie finden das Programm auf der
+Homepage des Autors:
+http://www.geocities.com/SiliconValley/Pines/7885/
+
+Lesen Sie die Anleitung zu diesem Programm und probieren Sie
+aus, ob und wie es fr Sie funktioniert: Alle eventuellen
+Probleme mit APM-Treiber-Version, OS/2-Version, BIOS,
+Hardware usw. mssen gel”st sein, bevor Sie weitergehen.
+
+DENKEN SIE DARAN: PmApm tut NICHTS ANDERES als dass es apm.exe
+aufruft mit den n”tigen Parametern, und der Einfachheit halber
+wird angenommen, dass dieser Aufruf nicht fehlschl„gt! Wenn
+Sie also die Funktion von apm.exe auf Ihrem System austesten
+und dabei alle m”glichen Fehlermeldungen lesen wollen, dann
+mssen Sie das Programm von der Kommandozeile aus starten.
+
+Wenn Sie so weit sind, k”nnen Sie einfach PmApm.EXE und die
+n”tigen MSG-Files (PmApmDE.MSG) ins Verzeichnis kopieren wo
+sich auch apm.exe befindet. Erzeugen Sie ein Programmobjekt
+und ziehen Sie es ins WarpCenter, wenn Sie das Programm auf
+m”glichst einfache Weise st„ndig zur Verfgung haben wollen,
+um das System auf definierte Weise zu beenden: Dies ist die
+Art wie ich es selber tue.
+
+Sie mssen entweder das "Arbeitsverzeichnis" des Programm-
+Objekts auf das Verzeichnis mit apm.exe setzen oder dieses
+Verzeichnis in den Suchpfad aufnehmen, sonst kann PmApm
+das Programm nicht korrekt aufrufen!
+
+Das war's!
+
+Benutzung
+---------
+Starten Sie das Programm, w„hlen Sie die Methode die Sie
+wnschen und drcken Sie Ok: Eine Fortschrittsanzeige wird
+erscheinen (die den Punkten entspricht, die Sie beim direkten
+Aufruf von apm.exe auf der Kommandozeile sehen), und wenn
+diese beendet ist, wird das System beendet.
+
+Wenn bei Ihnen spezielle Poweroff-Optionen n”tig sind,
+damit apm.exe funktioniert, dann w„hlen Sie diese unter
+"Optionen" vorher aus. Ihre Auswahl wird dann fr sp„ter
+gespeichert.
+
+Sprache
+-------
+Um die richtige Sprache zu finden verwendet das Programm
+die Umgebungsvariable LANG, welche in Ihrer CONFIG.SYS
+richtig gesetzt werden sollte (z.B. SET LANG=DE_DE). Die
+ersten beiden Buchstaben werden verwendet, um die richtige
+Message-Datei auszuw„hlen (z.B. PmApmDE.MSG). Wenn die
+LANG-Variable allerdings nicht gefunden wird oder keine
+passende Message-Datei, dann wird die englische Version
+verwendet.
+
+Im ersten Fall k”nnen Sie das Problem l”sen, indem Sie
+die korrekte LANG-Variable in Ihre CONFIG.SYS schreiben.
+
+Im zweiten Fall k”nnen Sie dazu beitragen, eine Version
+in Ihrer Sprache zu erzeugen, indem Sie selber eine
+šbersetzung machen: Schicken Sie mir eine e-mail und
+sagen Sie, welche Sprache Sie als Ausgangspunkt ben”tigen
+und ich werde Ihnen diese mailen. šbersetzen Sie die
+Message-Datei und die Anleitung (diese Datei) und mailen
+Sie mir sie zurck: Ich werde sie im n„chsten Update des
+Programms mit aufnehmen - und Sie werden natrlich
+unmittelbar Ihre Version zugemailt bekommen!
+
+Optionen
+--------
+Zwei Optionen betreffen die Kommandozeile, mit der
+apm.exe aufgerufen wird (schauen Sie in die Dokumentation
+dazu fr Erl„uterungen):
+
+- Varianten fr "poweroff" (d.h. "+" oder "-"): Probieren
+  Sie aus, ob Sie "/poweroff+" oder "/poweroff-" auf
+  Ihrem System ben”tigen (anstatt einfach "/poweroff",
+  was als Default verwendet wird) und w„hlen Sie die
+  korrekte Option hier aus.
+
+- Wenn Sie noch weitere Kommandozeilen-Parameter an apm.exe
+  bergeben mssen, schreiben Sie sie in das Eingabefeld
+  genau so, wie Sie sie auf der Kommandozeile schreiben
+  wrden (z.B. "/device disk").
+
+Seien Sie vorsichtig und probieren Sie vorher aus, was
+Sie hier schreiben: Sie werden die Fehlermeldungen von
+apm.exe NICHT sehen wenn Sie hier fehlerhafte Optionen
+eingeben!
+
+Eine dritte Option erlaubt es Ihnen, die eine oder andere
+Methode, die auf Ihrem System vielleicht nicht funktioniert,
+in der Auswahl auszublenden: So verhindern Sie, dass Sie
+sie aus Versehen dennoch w„hlen und dann Probleme bekommen
+(siehe auch "Weitere Bemerkungen").
+
+Deinstallation
+--------------
+L”schen Sie einfach das Programm-Objekt und die Dateien.
+Wenn Sie sehr "sauber" vorgehen wollen, mssen Sie auch
+noch mit Hilfe eines INI-Editors den PmApm-Eintrag aus
+OS2.INI l”schen. (Allerdings steht dort nicht viel: Nur
+die gespeicherten Einstellungen).
+
+Weitere Bemerkungen
+-------------------
+1. Es ist m”glich, dass nicht alle Methoden des System-
+   Abschlusses auf Ihrem System wirklich funktionieren
+   (z.B. kann es sein, dass "poweroff" das Filesystem nicht
+   richtig beendet, was zu CHKDSK-L„ufen beim Neustart fhrt,
+   oder "suspend" schaltet das System nur kurz aus und dann
+   sofort wieder ein, wie es bei mir der Fall ist): Das
+   heisst nicht, dass Sie nicht die anderen Optionen trotzdem
+   verwenden k”nnen! Blockieren Sie einfach die nicht
+   funktionierenden im "Optionen"-Men, damit Sie sie nicht
+   versehentlich dennoch ausw„hlen.
+
+2. Sie mssen wissen, dass keine der Methoden des
+   System-Abschlusses die WPS ordentlich beendet. (Das
+   betrifft vor allem "poweroff", weil die anderen Methoden
+   die WPS berhaupt laufen lassen.) Wenn Sie die WPS dazu
+   zwingen wollen, alle Einstellungen usw. ordentlich zu
+   speichern, mssen Sie von Zeit zu Zeit einen regul„ren
+   System-Shutdown durchfhren!
+
+Autor
+-----
+PmApm ist geschrieben von C. Bockemuehl <cbockem@datacomm.ch>.
+Wenn Sie Fragen oder Kommentare haben, die PmApm betreffen
+(oder sogar wenn Sie keine haben!) schicken Sie mir eine
+e-mail. Wenn Sie allerdings Probleme mit Apm/2 haben, dann
+schicken Sie bitte Ihre e-mail nicht an mich, sondern an
+Roman Stangl <rstangl@vnet.ibm.com>, der die "eigentliche
+Arbeit" geleistet und ein paar nette Eigenschaften von
+OS/2-APM zug„nglich gemacht hat, die sonst unbenutzbar w„ren!
+
+

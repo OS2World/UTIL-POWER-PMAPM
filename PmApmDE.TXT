@@ -1,0 +1,71 @@
+; /*************************************************************\
+;  * PmApm                                                     *
+;  * =====                                                     *
+;  * Copyright (c) 1998 C. Bockemuehl (cbockem@datacomm.ch)    *
+;  *                                                           *
+;  * Translate the messages in this file without changing the  *
+;  * structure. Save the result with the two letter language   *
+;  * code of your language, e.g. PmApmEN.TXT for english,      *
+;  * PmApmDE.TXT for german, PmApmFR.TXT for french etc.       *
+;  *                                                           *
+;  * Remarks:                                                  *
+;  * - Keep all %x sequences intact                            *
+;  * - Don't use message number 0 (special meaning in program) *
+;  *                                                           *
+;  * Version 0.1 :  7. 9.98                                    *
+; \*************************************************************/
+;
+PPM
+PPM0000?:
+PPM0001P: Pause (Standby)%0
+PPM0002P: Ruhezustand%0
+PPM0003P: Ausschalten%0
+PPM0004P: OK%0
+PPM0005P: Abbruch%0
+PPM0006?:
+PPM0007?:
+PPM0008?:
+PPM0009?:
+PPM0010?:
+PPM0011P: PmApm v0.1%0
+PPM0012P: ~Optionen...%0
+PPM0013P: Methode%0
+PPM0014?:
+PPM0015?:
+PPM0016?:
+PPM0017?:
+PPM0018?:
+PPM0019?:
+PPM0020?:
+PPM0021P: Apm.exe gestartet...%0
+PPM0022P: Es wird ausgefÅhrt: %0
+PPM0023P: Bitte warten...%0
+PPM0024?:
+PPM0025?:
+PPM0026?:
+PPM0027?:
+PPM0028?:
+PPM0029?:
+PPM0030?:
+PPM0031P: Optionen%0
+PPM0032P: Weitere Optionen%0
+PPM0033P: Deaktivierte Methoden%0
+PPM0034?:
+PPM0035?:
+PPM0036?:
+PPM0037?:
+PPM0038?:
+PPM0039?:
+PPM0040?:
+PPM0041E: Fehler%0
+PPM0042E: Keine Methode AusgewÑhlt%0
+PPM0043E: Das Programm APM.EXE konnte nicht gestartet werden%0
+PPM0044?:
+PPM0045?:
+PPM0046?:
+PPM0047?:
+PPM0048?:
+PPM0049?:
+PPM0050?:
+
+

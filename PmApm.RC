@@ -1,0 +1,13 @@
+#include <os2.h>
+#include "PmApm.H"
+
+ICON ID_MAIN PmApm.ICO
+
+MENU ID_MAIN PRELOAD
+BEGIN
+  MENUITEM "", ID_OPTIONS, MIS_TEXT
+END
+
+RCINCLUDE PmApm.DLG
+
+

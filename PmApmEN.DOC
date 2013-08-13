@@ -1,0 +1,156 @@
+PmApm
+=====
+(c) 1998 C. Bockemuehl (cbockem@datacomm.ch)
+Version 0.1 (first public version)
+
+PM program that uses APM/2 (version 1.4, by
+Roman Stangl <rstangl@vnet.ibm.com>) to perform a
+defined system termination:
+
+"standby":  All activities stopped, reactivation with mouse,
+            keyboard etc.
+"suspend":  All activities stopped, but reactivation only
+            with the "power on" switch. However, you don't
+            have to reboot, but you get your system back
+            where you left it.
+"poweroff": System shut down and power turned off
+            automatically, i.e. you don't have to use the
+            "power off" switch. Reboot on next start.
+
+Disclaimer
+----------
+This program is distributed as freeware - or rather
+"e-mail ware" - for everybody to copy and use at no charge.
+It is given to you "as is", with no warranty whatsoever.
+Just send me an e-mail if you are using the program, with
+or without any comments and experiences.
+
+Installation
+------------
+In order to use PmApm you first have to install APM/2 v1.4
+(other versions may work, but are not tested). You find it
+at the author's home page at
+http://www.geocities.com/SiliconValley/Pines/7885/
+
+Read the instructions of that program and find out, if and
+how it works for you: Any problems with your APM driver
+version, OS/2 version, BIOS, hardware etc. have to be
+solved at this point.
+
+KEEP IN MIND: PmApm does NOTHING but call apm.exe with the
+necessary parameters and (for simplicity) it assumes that
+the call will not fail! So in order to test the functionality
+of apm.exe on your system and to read all possible error
+messages, you have to start apm.exe from a command line.
+
+After that, you may copy PmApm.EXE and the necessary MSG
+files (PmApmEN.MSG) into the directory where also apm.exe
+resides and create a program object for it. You may put a
+shadow of it in the WarpCenter in order to have the most
+comfortable way of performing a defined "system down"
+(which is what I do).
+
+You have to either set the "working directory" of the
+program object to the directory where apm.exe resides, or
+else include it in your path; otherwise PmApm cannot call it
+properly!
+
+That's all!
+
+Use
+---
+Start the program, choose the "method" you want to use
+and press Ok: A progress indicator will appear (which
+corresponds to the points you see if you start apm.exe
+from the command line), and if it is finished the system
+is terminated.
+
+If you need extra options for the poweroff to work on
+your system, make your choice in the "options" menu. Your
+choice will be remembered.
+
+Language
+--------
+In order to find the right language, the program makes
+use of the environment variable LANG, which should be
+set in your CONFIG.SYS (eg. SET LANG=EN_US). The first
+two letters are taken to determine which message file
+to use (eg. PmApmEN.MSG). However, if no LANG variable
+is found or no corresponding message file, the english
+version is taken.
+
+In the first case you can solve the problem by adding
+the proper LANG variable to your CONFIG.SYS.
+
+In the second case you can assist in producing a version
+for your language if you provide your own translation:
+Send me an e-mail indicating which of the existing
+language files you need as your starting point and I
+will mail it to you. Translate the message file and
+the documentation (this file) and mail it back to me:
+I will include it in the next update of the program
+pack - and you will get your version mailed immediately,
+of course!
+
+Options
+-------
+There are two options concerning the command line for
+the call of apm.exe (look into the documentation
+for APM/2 for explanation):
+
+- modifier for "poweroff" (i.e. "+" or "-"): Try out if
+  you need "/poweroff+" or "/poweroff-" on your system
+  (instead of just "/poweroff", which is the default)
+  and set this option accordingly.
+
+- if you need to pass more command line parameters to
+  apm.exe, type them in as you would on the command line;
+  they are appended to the command line as you type them.
+  (example: "/device disk").
+
+Be careful and try out what your are setting here: You
+will NOT see the error messages of apm.exe if you enter
+erroneous options!
+
+A third option allows you to block the one or other
+method that might not work on your system: This is just
+to prevent you from erroneously choosing an option that
+causes trouble (see also "further remarks").
+
+Uninstall
+---------
+Just delete the program object and files. If you want to
+be very "clean", you will have to remove the PmApm entry
+from your OS2.INI file using any INI editor (however, not
+much stuff there: just the remembered settings).
+
+Further remarks
+---------------
+1. It is possible that not all methods of system termination
+   are actually working on your system (i.e., "poweroff"
+   may not terminate the file system properly and you get
+   CHKDSK runs after reboot, or "suspend" just turns off the
+   system and on again, like on my system): This doesn't
+   prevent you from using the other options anyway! Just
+   block those that do not work in the "options" menu, so
+   you will not be able to choose them accidentally.
+
+2. You have to know that all the methods of system
+   termination you can apply with this tool do NOT shutdown
+   the WPS properly. (This applies mainly if you choose
+   "poweroff", because the others leave the WPS just up
+   and running.) If you want to force the WPS to save all
+   settings etc., you have to perform a regular system
+   shutdown from time to time!
+
+Author
+------
+PmApm is written by C. Bockemuehl <cbockem@datacomm.ch>.
+If you have any questions or comments concerning PmApm (or
+even if you haven't!) send me an e-mail. However, if you
+have problems with Apm/2, don't send your e-mail to me but
+rather to Roman Stangl <rstangl@vnet.ibm.com>, who did the
+"real thing" making some nice features of OS/2 APM available
+which otherwise are unuseable!
+
+
